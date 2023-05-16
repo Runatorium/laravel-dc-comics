@@ -9,7 +9,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('comics', function (Blueprint $table) {
-            $table->string('price')->change();
+            $table->date('sale_date')->nullable()->change();
         });
     }
 
@@ -17,7 +17,7 @@ return new class extends Migration {
     public function down()
     {
         Schema::table('comics', function (Blueprint $table) {
-            $table->float('price');
+            $table->date('sale_date');
         });
     }
 };
