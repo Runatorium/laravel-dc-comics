@@ -14,6 +14,7 @@
                         <p>${{ $comic->price }}</p>
                         <p>{{ $comic->series }}</p>
                     </div>
+                    <a href="{{ route('comics.show', ['comic' => $comic->id]) }}">info fumetto</a>
                 </div>
             </div>
         @endforeach
