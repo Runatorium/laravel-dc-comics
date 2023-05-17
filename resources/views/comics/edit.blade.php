@@ -5,9 +5,10 @@
 @endsection
 
 @section('content')
-    <form method="POST" action="{{ route('comics.store') }}">
+    <form method="POST" action="{{ route('comics.update', ['comic' => $comic->id]) }}">
 
         @csrf
+        @method('PUT')
 
         <div class="mb-3">
             <label for="thumb" class="form-label">Url dell'immagine</label>
