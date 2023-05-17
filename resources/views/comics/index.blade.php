@@ -17,6 +17,11 @@
                     <a href="{{ route('comics.show', ['comic' => $comic->id]) }}"class="btn btn-secondary">info fumetto</a>
                     <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-secondary mt-2">Edita
                         Elemento</a>
+                    <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-secondary mt-2 w-100">Eliminia</button>
+                    </form>
                 </div>
             </div>
         @endforeach
