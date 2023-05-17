@@ -14,5 +14,6 @@
     </div>
 
     <a href="{{ route('comics.index') }}" class="btn btn-secondary">Torna alla lista</a>
+    <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-secondary">Edita Elemento</a>
 
 </div>
