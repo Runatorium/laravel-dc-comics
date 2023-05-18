@@ -13,6 +13,9 @@
         <div class="mb-3">
             <label for="thumb" class="form-label">Url dell'immagine</label>
             <input type="text" class="form-control" id="thumb" name="thumb" value="{{ $comic->thumb }}">
+            @error('thumb')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
 
         <div class="mb-3">
